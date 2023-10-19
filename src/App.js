@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Input from './components/Input/input';
+import List from './components/task/List';
 
 function App() {
+
+  const [data, setData] = useState(['hey', 'bwyywewe','slayyyyyyyyyyyy']);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{display: 'grid',placeItems: 'center',}}>
+      <h1>To Do APP</h1>
+      <Input data={data} setData={setData}/>
+      <List data = {data} title = "ToDo's" />
     </div>
   );
 }
