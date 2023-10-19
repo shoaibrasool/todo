@@ -29,13 +29,14 @@ export default function List({ data, title }) {
                         sx={{
                             my: 1,
                             mx: 'auto',
-                            p: 2,
+                            py: 2,
+                            px: 10,
                             fontWeight: 'bold',
                         }}
                     >
-                        <Stack spacing={2} direction="row" alignItems="center" style={{ position: "relative" }}>
+                        <Stack spacing={2} direction="row" alignItems="center" style={{ position: "relative"}}>
                             <div >
-                                <Typography sx={{ color: '#9c1616', fontWeight: 'bold' }}>{data}</Typography>
+                                <Typography sx={{ color: '#9c1616', fontWeight: 'bold' }}>{data.toUpperCase()}</Typography>
                             </div>
                         </Stack>
                     </Item>

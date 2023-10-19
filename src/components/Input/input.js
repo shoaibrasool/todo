@@ -2,7 +2,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { IconButton, TextField } from '@mui/material'
 import React, { useState } from 'react'
 
-const Input = ({ data, setData , showData }) => {
+const Input = ({ data, setData }) => {
 
     const [task, setTask] = useState();
 
@@ -11,18 +11,18 @@ const Input = ({ data, setData , showData }) => {
     }
 
     const handleClick = () => {
-        if (task !== ""){
-            data.push(task);
+        if (task !== "") {
+            setData([task, ...data]);
         }
     }
 
     return (
         <div>
+            <h1>Add toDo's Here</h1>
             <TextField id="standard-basic" label="Standard" variant="standard" onChange={value} />
             <IconButton aria-label="delete" onClick={handleClick}>
                 <DeleteIcon />
             </IconButton >
-            <h1>CHECK</h1>
         </div>
     )
 }
