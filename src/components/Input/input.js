@@ -1,5 +1,4 @@
-// import DeleteIcon from '@mui/icons-material/Delete';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import AddIcon from '@mui/icons-material/Add';
 import { IconButton, TextField } from '@mui/material'
 import React, { useState } from 'react'
 
@@ -22,8 +21,7 @@ const Input = ({ data, setData }) => {
             <h1 style={{color: '#9c1616'}}>Add toDo's Here</h1>
             <TextField style={{fontSize:"2rem", borderRadius:"12px"}} id="standard-basic" label="Standard" variant="standard" onChange={value} />
             <IconButton aria-label="delete" onClick={handleClick}>
-                {/* <DeleteIcon /> */}
-                <ArrowDropDownIcon style={{color:"white", fontSize:"2rem",backgroundColor:'#9c1616'}} />
+                <AddIcon style={{color:"white", fontSize:"2rem",backgroundColor:'#9c1616'}} />
             </IconButton >
         </div>
     )
