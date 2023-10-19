@@ -22,7 +22,7 @@ const Input = ({ data, setData , showData }) => {
             <IconButton aria-label="delete" onClick={handleClick}>
                 <DeleteIcon />
             </IconButton >
-
+            <h1>CHECK</h1>
         </div>
     )
 }
